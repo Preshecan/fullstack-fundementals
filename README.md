@@ -1,2 +1,2 @@
 # fullstack-fundementals
-React, hooks, redux, node, postgres
+React, hooks, redux, typescript, node, postgres
