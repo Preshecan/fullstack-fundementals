@@ -1,12 +1,15 @@
-import React from 'react'
-import { ITask } from '../interfaces'
+import React, {useContext} from 'react'
+import { ITask } from '../interfaces';
+import {GlobalContext} from '../Context/GlobalState';
 
 interface Props {
     task: ITask;
-    completeTask(taskToDelete: string): void;
+    //completeTask(taskToDelete: string): void;
 }
 
-const TodoTasks= ({task, completeTask}: Props) => {
+const TodoTasks= ({task}: Props) => {
+    const {completeTask} = useContext(GlobalContext)
+
     return (
         <div className='task'>
             <div className="content">
