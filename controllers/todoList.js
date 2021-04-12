@@ -23,6 +23,7 @@ exports.getListItems = async (req, res, next) =>{
 //@route POST /api/v1/todoList
 //@access public
 exports.addListItem = async (req, res, next) =>{
+    console.log(req.body);
     const { taskName, deadline } = req.body;
     try{
         const todoItem = await todoList.create(req.body);
